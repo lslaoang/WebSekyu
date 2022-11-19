@@ -1,0 +1,24 @@
+spring:
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: "570346638219-0913qhfnv9amsc28lj6fk0b85rmjk3ab.apps.googleusercontent.com"
+            client-secret: "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"
+
+this:
+  shitx: 570346638219-0913qhfnv9amsc28lj6fk0b85rmjk3ab.apps.googleusercontent.com
+#        access-token-uri: https:www.googleapis.com/oauth2/v3/token
+#        user-authorization-uri: https:accounts.google.com/o/oauth2/auth
+#        token-name: oauth_token
+#        authentication-scheme: query
+#        client-authentication-scheme: form
+#        scope:
+#          - profile
+#          - email
+#          - openid
+#
+#    resource:
+#      user-info-uri: https://www.googleapis.com/userinfo/v2/me
+#      prefer-token-info: false
