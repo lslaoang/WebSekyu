@@ -11,26 +11,22 @@ public class PageController {
 
     @GetMapping("/login")
     public String getLoginPage(){
-        System.out.println("This happened!");
         return "oauth2-login";
     }
 
-    @GetMapping("/login-failed")
+    @GetMapping("/access-denied")
     public String getFailedLoginPage(){
-        System.out.println("This happened!");
-        return "login-failed";
+        return "access-denied";
     }
 
     @GetMapping("/login-success")
     public String getSuccessLoginPage(){
-        System.out.println("This happened!");
         return "login-success";
     }
 
     @GetMapping("/whoami")
     @ResponseBody
     public Principal getRequestorInfo(Principal principal){
-        System.out.println("INFO: " + principal);
         return principal;
     }
 }
