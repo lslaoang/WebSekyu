@@ -1,5 +1,9 @@
 package com.lao.websekyu.controller;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -26,7 +30,9 @@ public class PageController {
 
     @GetMapping("/whoami")
     @ResponseBody
-    public Principal getRequestorInfo(Principal principal){
-        return principal;
+    public ResponseEntity<String> getRequesterInfo(Principal principal) {
+
+        Gson gson = new GsonBuilder().setPrettyPrinting().create();
+        return new ResponseEntity<>(gson.toJson(principal), HttpStatus.ACCEPTED);
     }
 }
