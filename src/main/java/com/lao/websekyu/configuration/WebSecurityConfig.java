@@ -15,8 +15,8 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .and()
                 .oauth2Login()
                 .loginPage("/login")
-                .defaultSuccessUrl("/home")
-                .failureUrl("/google.com");
+                .defaultSuccessUrl("/login-success")
+                .failureUrl("/login-failed");
     }
 
 }
