@@ -36,7 +36,7 @@ public class PageController {
 
     @GetMapping("/whoami")
     @ResponseBody
-    public ResponseEntity<String> getRequesterInfo(Principal principal) {
+    public ResponseEntity getRequesterInfo(Principal principal) {
         LOGGER.info("Fetching user's information.");
         Gson gson = new GsonBuilder().setPrettyPrinting().create();
         return new ResponseEntity<>(gson.toJson(principal), HttpStatus.ACCEPTED);
